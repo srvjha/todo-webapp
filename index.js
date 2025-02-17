@@ -41,6 +41,7 @@ add_todo.addEventListener("click", () => {
             edit_btn.innerText = "Save";
 
             const editInput = document.createElement("input");
+            editInput.setAttribute("id","edit-input")
             editInput.type = "text";
             editInput.value = span_text.innerText;
             span_text.replaceWith(editInput);
