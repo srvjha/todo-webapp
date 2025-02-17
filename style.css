@@ -1,0 +1,152 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0e0e0e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+.container-child-1{
+    display: flex;
+    gap: 10px;
+   
+    justify-content: space-evenly;
+}
+
+/* Input & Button */
+#input-text {
+    width: 80%;
+    height: 40%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: 0.3s;
+}
+
+#input-text:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#add-btn {
+    background: #ff0f7b;
+    background: linear-gradient(45deg, #ff0f7b, #f89b29);
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    margin-top:20px;
+}
+
+#add-btn:hover {
+    box-shadow: 0 0 15px #ff0f7b, 0 0 25px #f89b29;
+    transform: scale(1.1);
+}
+
+/* Todo List */
+ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons inside list */
+button {
+    background: transparent;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Edit Button */
+button:nth-child(2) {
+    color: #29f8a3;
+}
+
+button:nth-child(2):hover {
+    text-shadow: 0 0 10px #29f8a3;
+}
+
+/* Delete Button */
+button:nth-child(3) {
+    color: #ff4757;
+}
+
+button:nth-child(3):hover {
+    text-shadow: 0 0 10px #ff4757;
+}
+
+/* Removing Animation */
+li.removed {
+    animation: fadeOut 0.4s ease-in-out;
+}
+
+/* Fade-out Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
